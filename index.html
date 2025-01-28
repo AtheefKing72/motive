@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the latest health and fitness trends, tips, and guides to lead a healthier lifestyle.">
+    <meta name="keywords" content="health, fitness, wellness, exercise, diet, mental health">
+    <meta name="author" content="Your Name">
+    <title>Health and Fitness: Your Guide to Wellness</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(135deg, #32a852, #2a7bcf);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: #2a7bcf;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            margin-bottom: 1rem;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .buttons button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .buttons .like {
+            background-color: #4caf50;
+        }
+        .buttons .comment {
+            background-color: #2196f3;
+        }
+        .buttons .share {
+            background-color: #ff5722;
+        }
+        .comment-section {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .comment-section h3 {
+            margin: 0 0 1rem;
+        }
+        .comment-section textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .comment-section button {
+            padding: 0.5rem 1rem;
+            background-color: #2a7bcf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-history {
+            margin-top: 1rem;
+        }
+        .comment-history p {
+            padding: 0.5rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        @keyframes likeAnimation {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        .like-animation {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: likeAnimation 1s ease forwards;
+            font-size: 1.5rem;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health and Fitness: Your Guide to Wellness</h1>
+        <p>Explore tips and trends to live a healthier, more fulfilling life.</p>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>
+                Health and fitness are essential aspects of leading a balanced and happy life. From eating nutritious food to maintaining an active lifestyle, every small step contributes to overall well-being.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Top Fitness Trends</h2>
+            <p>
+                1. High-Intensity Interval Training (HIIT) for quick and effective workouts.<br>
+                2. Wearable fitness technology to track progress.<br>
+                3. Mind-body exercises like yoga and pilates.
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="like" onclick="likePost()">Like</button>
+            <button class="comment" onclick="toggleCommentSection()">Comment</button>
+            <button class="share" onclick="sharePost()">Share</button>
+        </div>
+        <div class="comment-section" id="comment-section" style="display: none;">
+            <h3>Leave a Comment</h3>
+            <textarea id="comment-text" placeholder="Write your comment here..."></textarea>
+            <button onclick="addComment()">Submit</button>
+            <div class="comment-history" id="comment-history"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Health and Wellness. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function likePost() {
+            const likeButton = document.querySelector('.like');
+            const animation = document.createElement('span');
+            animation.className = 'like-animation';
+            animation.textContent = '👍';
+            likeButton.appendChild(animation);
+
+            setTimeout(() => {
+                animation.remove();
+            }, 1000);
+        }
+
+        function toggleCommentSection() {
+            const section = document.getElementById('comment-section');
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addComment() {
+            const commentText = document.getElementById('comment-text').value;
+            const commentHistory = document.getElementById('comment-history');
+
+            if (commentText.trim() === '') {
+                alert('Please write something before submitting.');
+                return;
+            }
+
+            const comment = document.createElement('p');
+            comment.textContent = commentText;
+            commentHistory.appendChild(comment);
+
+            document.getElementById('comment-text').value = '';
+        }
+
+        function sharePost() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Check out this amazing article on health and fitness!');
+
+            const facebook = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            const whatsapp = `https://api.whatsapp.com/send?text=${text} ${url}`;
+            const linkedin = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
+
+            window.open(facebook, '_blank');
+            window.open(whatsapp, '_blank');
+            window.open(linkedin, '_blank');
+        }
+    </script>
+</body>
+</html>
