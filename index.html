@@ -3,222 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the latest health and fitness trends, tips, and guides to lead a healthier lifestyle.">
-    <meta name="keywords" content="health, fitness, wellness, exercise, diet, mental health">
-    <meta name="author" content="Your Name">
-    <title>Health and Fitness: Your Guide to Wellness</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.8;
-        }
-        header {
-            background: linear-gradient(135deg, #32a852, #2a7bcf);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section h2 {
-            font-size: 2rem;
-            color: #2a7bcf;
-            margin-bottom: 1rem;
-        }
-        .section p {
-            margin-bottom: 1rem;
-        }
-        .buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-        .buttons button {
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        .buttons .like {
-            background-color: #4caf50;
-        }
-        .buttons .comment {
-            background-color: #2196f3;
-        }
-        .buttons .share {
-            background-color: #ff5722;
-        }
-        .comment-section {
-            margin-top: 2rem;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-        .comment-section h3 {
-            margin: 0 0 1rem;
-        }
-        .comment-section textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .comment-section button {
-            padding: 0.5rem 1rem;
-            background-color: #2a7bcf;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .comment-history {
-            margin-top: 1rem;
-        }
-        .comment-history p {
-            padding: 0.5rem;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 0.5rem;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        @keyframes likeAnimation {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(2);
-                opacity: 0;
-            }
-        }
-        .like-animation {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: likeAnimation 1s ease forwards;
-            font-size: 1.5rem;
-            color: #4caf50;
-        }
-    </style>
+    <title>Health & Fitness Hub</title>
+    <meta name="description" content="Discover expert insights, workout routines, and nutrition tips to achieve optimal health and fitness.">
+    <meta name="keywords" content="health, fitness, workouts, nutrition, mental health, weight loss, muscle building">
+    <meta property="og:title" content="Health & Fitness Hub">
+    <meta property="og:description" content="Your go-to platform for health, fitness, and wellness.">
+    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
 </head>
 <body>
     <header>
-        <h1>Health and Fitness: Your Guide to Wellness</h1>
-        <p>Explore tips and trends to live a healthier, more fulfilling life.</p>
+        <h1>Health & Fitness Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#workouts">Workouts</a></li>
+                <li><a href="#mental-health">Mental Health</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <div class="section">
-            <h2>Introduction</h2>
-            <p>
-                Health and fitness are essential aspects of leading a balanced and happy life. From eating nutritious food to maintaining an active lifestyle, every small step contributes to overall well-being.
-            </p>
-        </div>
-        <div class="section">
-            <h2>Top Fitness Trends</h2>
-            <p>
-                1. High-Intensity Interval Training (HIIT) for quick and effective workouts.<br>
-                2. Wearable fitness technology to track progress.<br>
-                3. Mind-body exercises like yoga and pilates.
-            </p>
-        </div>
-        <div class="buttons">
-            <button class="like" onclick="likePost()">Like</button>
-            <button class="comment" onclick="toggleCommentSection()">Comment</button>
-            <button class="share" onclick="sharePost()">Share</button>
-        </div>
-        <div class="comment-section" id="comment-section" style="display: none;">
-            <h3>Leave a Comment</h3>
-            <textarea id="comment-text" placeholder="Write your comment here..."></textarea>
-            <button onclick="addComment()">Submit</button>
-            <div class="comment-history" id="comment-history"></div>
-        </div>
-    </div>
+    <section id="home">
+        <h2>Welcome to Your Ultimate Health & Fitness Guide</h2>
+        <p>Discover expert insights, in-depth workout routines, and scientifically backed nutrition advice to help you achieve your dream physique and optimal health.</p>
+        <center><img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhbHRoeSUyMGxpZmVzdHlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Healthy Lifestyle" width="400" height="300"></center>
+        <button onclick="sharePage()">Share</button>
+    </section>
+    <section id="nutrition">
+        <h2>Nutrition & Diet: Fuel Your Body Right</h2>
+        <p>Good nutrition is the cornerstone of a healthy lifestyle. Learn about balanced diets, superfoods, and effective meal planning strategies to fuel your workouts and daily activities.</p>
+        <center><img src="https://files.oaiusercontent.com/file-6UzoB3WkuMT3VEQ5Zj8C8W?se=2025-01-29T09%3A01%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D31253ee3-898e-46c8-afd4-eba1735dc297.webp&sig=oL5tRNkTaXSD0dVeeQ1stkXBQR8WnHle%2Bhdzqv2FhGE%3D" alt="Healthy Nutrition" width="400" height="300"></center>
+        <ul>
+            <li>Macronutrients & Micronutrients</li>
+            <li>Best Foods for Muscle Growth</li>
+            <li>Healthy Meal Prep Tips</li>
+            <li>Hydration & Detox Benefits</li>
+            <li>Understanding Calories & Metabolism</li>
+        </ul>
+    </section>
+    <section id="workouts">
+        <h2>Workout Plans: Exercise Smarter</h2>
+        <p>Find the best workout plans tailored for weight loss, muscle building, endurance, and flexibility. These routines cater to beginners and advanced fitness enthusiasts alike.</p>
+       <center> <img src="https://files.oaiusercontent.com/file-XevHPruACuBzPZ2DJV4c7w?se=2025-01-29T09%3A08%3A28Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D048fcfdb-61b9-4b1e-b5e6-ff1b7cd033a3.webp&sig=9cepAui3650CU%2BImzVfqBFoVB3ox/KTejH6OAEPMHg8%3D" alt="Workout Routine" width="400" height="300"></center>
+        <ol>
+            <li>Full-Body Strength Training</li>
+            <li>HIIT Workouts for Fat Burn</li>
+            <li>Yoga for Mental & Physical Wellness</li>
+            <li>Pilates for Core Strength</li>
+            <li>Stretching & Recovery Techniques</li>
+        </ol>
+    </section>
+    <section id="mental-health">
+        <h2>Mental Well-being: Strengthen Your Mind</h2>
+        <p>Health isn't just physical. Discover effective mindfulness techniques, stress management practices, and mental wellness strategies to boost your overall well-being.</p>
+        <center><img src="https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVudGFsfGVufDB8fDB8fHwwg" alt="Mental Wellness"></center>
+        <blockquote>"A healthy mind in a healthy body."</blockquote>
+        <p>Here are some tips for maintaining good mental health:</p>
+        <ul>
+            <li>Practicing Meditation and Mindfulness</li>
+            <li>Getting Enough Sleep</li>
+            <li>Managing Stress with Deep Breathing</li>
+            <li>Engaging in Social Activities</li>
+            <li>Seeking Professional Help When Needed</li>
+        </ul>
+    </section>
+    <section id="lifestyle">
+        <h2>Healthy Lifestyle: Habits for Long-Term Wellness</h2>
+        <p>Adopting a healthy lifestyle is more than just eating right and exercising. It’s about maintaining consistency in your habits.</p>
+       <center> <img src="https://files.oaiusercontent.com/file-XjXKKHhBkgCAUPHBvZEPYF?se=2025-01-29T08%3A57%3A31Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7cd809db-173d-489f-9ab4-cbe2de586252.webp&sig=0AOdaHPPFMuF6ZI10W/cXAs9Wh2PvwK499MtuAJA2HM%3D" alt="Healthy Lifestyle Choices" width="400" height="300"></center>
+        <ul>
+            <li>Building a Consistent Sleep Routine</li>
+            <li>Avoiding Harmful Substances</li>
+            <li>Balancing Work and Personal Life</li>
+            <li>Engaging in Outdoor Activities</li>
+            <li>Practicing Gratitude and Positivity</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any queries or need guidance, feel free to reach out.</p>
+        <center><img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contact Us" width="150" height="100"></center>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
     <footer>
-        <p>&copy; 2025 Health and Wellness. All Rights Reserved.</p>
+        <p>&copy; 2025 Health & Fitness Hub. All rights reserved.</p>
     </footer>
     <script>
-        function likePost() {
-            const likeButton = document.querySelector('.like');
-            const animation = document.createElement('span');
-            animation.className = 'like-animation';
-            animation.textContent = '👍';
-            likeButton.appendChild(animation);
-
-            setTimeout(() => {
-                animation.remove();
-            }, 1000);
-        }
-
-        function toggleCommentSection() {
-            const section = document.getElementById('comment-section');
-            section.style.display = section.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function addComment() {
-            const commentText = document.getElementById('comment-text').value;
-            const commentHistory = document.getElementById('comment-history');
-
-            if (commentText.trim() === '') {
-                alert('Please write something before submitting.');
-                return;
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                }).then(() => console.log('Thanks for sharing!'))
+                .catch(console.error);
+            } else {
+                alert('Your browser does not support sharing.');
             }
-
-            const comment = document.createElement('p');
-            comment.textContent = commentText;
-            commentHistory.appendChild(comment);
-
-            document.getElementById('comment-text').value = '';
-        }
-
-        function sharePost() {
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('Check out this amazing article on health and fitness!');
-
-            const facebook = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            const whatsapp = `https://api.whatsapp.com/send?text=${text} ${url}`;
-            const linkedin = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
-
-            window.open(facebook, '_blank');
-            window.open(whatsapp, '_blank');
-            window.open(linkedin, '_blank');
         }
     </script>
 </body>
